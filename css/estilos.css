@@ -42,6 +42,17 @@ a:hover{
     box-shadow: 15px 15px 20px black; 
 }
 
+.container-r {
+    display: flex;
+    height: 400px;
+    width: 800px;
+    /*border: 1px solid black;*/
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 15px 15px 20px black; 
+    flex-direction:row-reverse;
+}
+
 /*Registro form*/
 .form {
     display: flex;
@@ -55,7 +66,7 @@ a:hover{
 .box {
     width: 77.7%;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     align-items: center;
 
 }

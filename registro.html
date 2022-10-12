@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Registro</title>
+    <title>Registrarse</title>
 
     <link href="css/estilos.css" rel="stylesheet">
     <!-- Fonts -->
@@ -13,8 +13,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <style>
+        body {
+            background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        }
+    </style>
+    <div class="container-r">
+        <form action="/" method="POST" class="form">
+            <h2>Sign-up</h2>
+            <input type="text" class="box input" placeholder="Nombre completo" id="name" required>
+            <input type="email" class="box input" placeholder="e-mail" id="email" required>
+            <input type="text" class="box input" placeholder="Usuario" id="user" required>
+            <input type="password" class="box input" placeholder="Password" id="pass" required>
+            <input type="submit" value="Registrar" id="submit">
+            <a href="index.html">Ya tengo cuenta | Iniciar sesión</a>
+        </form>
+        <div class="side">
+            <img src="img/wallpaper.png" alt="">
+        </div>
+    </div>
 </body>
 
 </html>
