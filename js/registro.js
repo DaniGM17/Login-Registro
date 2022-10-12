@@ -7,17 +7,31 @@ const formulario = document.getElementById('formsignup');
 
 formulario.addEventListener('submit', registro);
 
-function registro(e){
-    e.preventDeafault;
+function registro(e) {
+    e.preventDeafault();
 
     let nombreVal = nombre.value;
     let emailVal = email.value;
     let userVal = user.value;
     let passVal = pass.value;
 
-    if(nombreVal == '' || emailVal == '' || userVal == '' || passVal == ''){
+
+    if (nombreVal == '' || emailVal == '' || userVal == '' || passVal == '') {
         return;
     }
 
-    console.log('sip');
+    const usuario = {
+        nombre: nombreVal,
+        email: emailVal,
+        user: userVal,
+        pass: passVal
+    }
+
+    localStorage.setItem('usuario', JSON.stringify(usuario));
+
+    nombre.value = ''; 
+    email.value = '';
+    user.value = '';
+    pass.value = '';
+    console.log('usuario guardado');
 }
