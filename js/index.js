@@ -7,12 +7,25 @@ const formulario = document.getElementById('formlogin');
 formulario.addEventListener('submit', login);
 
 //Funciones
-function login(e){
+function login(e) {
     e.preventDefault();
     let usuarioVal = usuario.value;
     let passwordVal = password.value;
-    
-    if(usuarioVal == '' || passwordVal == ''){
+
+    if (usuarioVal == '' || passwordVal == '') {
+        creaMensaje('Verifica tus campos', 'danger');
         return;
+    }
+
+    if (localStorage.getItem('usuario')) {
+        let objeto = JSON.parse(localStorage.getItem('usuario'));
+
+        if (usuarioVal == objeto.user && passwordVal == objeto.pass) {
+            creaMensaje('Usuario cncorrecto', 'success');
+        } else {
+            creaMensaje('Usuario Incorrecto', 'danger');
+        }
+    } else {
+        creaMensaje('No hay registros', 'danger');
     }
 }
