@@ -16,7 +16,25 @@
 <body>
     <div class="container">
         <h2>Bienvenido</h2>
+        <div id="salir">
+            <button id="submit">Salir</button>
+        </div>
     </div>
+    <script>
+
+        window.addEventListener('load', function(){
+            if(localStorage.getItem('sesion') == null){
+                window.location.replace('index.html');
+            }
+        })
+
+       const botn=  document.getElementById('submit');
+       botn.addEventListener('click', function(e){
+        e.preventDefault();
+        localStorage.getItem('sesion');
+        window.open('../inicio.html', '_self');
+       })
+    </script>
 </body>
 
 </html>
